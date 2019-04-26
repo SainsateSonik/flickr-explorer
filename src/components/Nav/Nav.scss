@@ -1,0 +1,77 @@
+header {
+    position: fixed;
+    width: 100%;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    h1 {
+        color: #fff;
+        font-size: 1.6em;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+    }
+
+    input {
+        width: 30%;
+        padding: 10px 0;
+        margin-bottom: 10px;
+        font-size: 1em;
+        font-weight: 100;
+        letter-spacing: 0.8px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        color: #fff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    .recent-search {
+        width: 100%;
+        text-align: center;
+        padding-top: 5px;
+        
+        li {
+            cursor: pointer;
+            list-style: none;
+            color: #fff;
+            font-size: 0.8em;
+            display: inline;
+            margin: 5px;
+            padding: 5px 10px;
+            border: 1px solid #fff;
+            border-radius: 100px;
+
+            &:hover {
+                background-color: teal;
+                border-color: teal;
+            }
+        }
+    }
+
+    @media (max-width: 800px) {
+        align-items: flex-start;
+
+        h1 {
+            // font-size: 1em;
+            display: none;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 0 5px 0;
+        }
+
+        .recent-search {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding: 5px 0 15px 0;
+        }
+    }
+}

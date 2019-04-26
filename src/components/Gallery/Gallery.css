@@ -1,0 +1,111 @@
+.gallery {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  z-index: -1;
+  padding: 40px;
+}
+
+.gallery .gallery-stack {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+
+.gallery .gallery-stack li {
+  list-style: none;
+}
+
+.gallery .gallery-stack li img {
+  width: 100%;
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: relative;
+}
+
+.gallery .gallery-stack li img:hover {
+  -webkit-box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.7);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.gallery .loader-wrapper {
+  opacity: 0;
+  margin-top: 40px;
+  height: 0;
+  width: 100%;
+  position: relative;
+}
+
+.gallery .loader-wrapper p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  border: 2px dashed #aaa;
+  color: #aaa;
+  font-size: 1.2em;
+  padding: 10px 150px;
+}
+
+@media (max-width: 800px) {
+  .gallery {
+    top: 125px;
+    padding: 5px;
+  }
+  .gallery .gallery-stack {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+  .gallery .gallery-stack li img:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .gallery .loader-wrapper {
+    margin-top: 10px;
+    height: 40px;
+  }
+  .gallery .loader-wrapper p {
+    font-size: 0.9em;
+    padding: 10px;
+    top: 40%;
+    width: 100%;
+  }
+}
+
+.no-photos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 20px;
+  font-size: 1.2em;
+  border: 2px dashed #aaa;
+  text-align: center;
+  color: #aaa;
+}
+
+@media (max-width: 800px) {
+  .no-photos {
+    width: 90%;
+    top: 100%;
+    -webkit-transform: translate(-50%, -120%);
+            transform: translate(-50%, -120%);
+    font-size: 0.9em;
+    padding: 20px 10px;
+  }
+}
+/*# sourceMappingURL=Gallery.css.map */

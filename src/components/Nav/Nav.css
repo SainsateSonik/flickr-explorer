@@ -1,0 +1,87 @@
+header {
+  position: fixed;
+  width: 100%;
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+header input {
+  width: 30%;
+  padding: 10px 0;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  color: #fff;
+}
+
+header input:focus {
+  outline: none;
+}
+
+header .recent-search {
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+}
+
+header .recent-search li {
+  cursor: pointer;
+  list-style: none;
+  color: #fff;
+  font-size: 0.8em;
+  display: inline;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+}
+
+header .recent-search li:hover {
+  background-color: teal;
+  border-color: teal;
+}
+
+@media (max-width: 800px) {
+  header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header h1 {
+    display: none;
+  }
+  header input {
+    width: 100%;
+    padding: 10px 0 5px 0;
+  }
+  header .recent-search {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 5px 0 15px 0;
+  }
+}
+/*# sourceMappingURL=Nav.css.map */

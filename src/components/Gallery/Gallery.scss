@@ -1,0 +1,98 @@
+.gallery {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    z-index: -1;
+    padding: 40px;
+
+    .gallery-stack {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 30px;
+
+        li {
+            list-style: none;
+
+            img {
+                width: 100%;
+                cursor: pointer;
+                box-shadow: none;
+                transition: 0.2s;
+                position: relative;
+                
+                &:hover {
+                    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.7);
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+
+    .loader-wrapper {
+        opacity: 0;
+        margin-top: 40px;
+        height: 0;
+        width: 100%;
+        position: relative;
+
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border: 2px dashed #aaa;
+            color: #aaa;
+            font-size: 1.2em;
+            padding: 10px 150px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        top: 125px;
+        padding: 5px;
+
+        .gallery-stack { 
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 5px;
+
+            li img:hover {
+                box-shadow: none;
+                transform: none;
+            }
+        }
+
+        .loader-wrapper {
+            margin-top: 10px;
+            height: 40px;
+
+            p {
+                font-size: 0.9em;
+                padding: 10px;
+                top: 40%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.no-photos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    font-size: 1.2em;
+    border: 2px dashed #aaa;
+    text-align: center;
+    color: #aaa;
+
+    @media (max-width: 800px) {
+        width: 90%;
+        top: 100%;
+        transform: translate(-50%, -120%);
+        font-size: 0.9em;
+        padding: 20px 10px;
+    }
+}
