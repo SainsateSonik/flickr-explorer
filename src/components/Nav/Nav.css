@@ -81,6 +81,7 @@ header .recent-search li:hover {
   header .recent-search {
     overflow-x: scroll;
     overflow-y: hidden;
+    text-align: left;
     padding: 5px 0 15px 0;
   }
 }
